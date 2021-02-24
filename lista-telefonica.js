@@ -6,7 +6,7 @@ const contacts = [
     },
     {
         id: 2,
-        name: "Ada Lovelace",
+        name: "Ada",
         number: "39-44-5323523"
     },
     {
