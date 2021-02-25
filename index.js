@@ -56,21 +56,27 @@ app.delete('/api/persons/:id', (req, res) =>{
 })
 
 //Ruta 1.5
-/*
+
 app.use(express.json())
 app.post('/api/persons/', (req, res) =>{
     const newContact = {
-        ...req.body
-     id : Math.floor(Math.random()*1000),     
+        ...req.body,
+        id : Math.round(Math.random()*99999)
     }
-
-    const totalContacts = contacts.concat(newContact)
-    res.status(201).json(newContact)
-    if{}
-
+    console.log(newContact['name'])
+    if (newContact['name'] === '') {
+        const errorName = { error: 'name must be filled' }
+        res.status(400).json(errorName)
+    }if (newContact['name'] === contacts['name']) {
+        const errorName = { error: 'name must be different' }
+        res.status(400).json(errorName)
+    } else {
+        console.log(newContact)
+        res.status(201).end()
+    }
     
 })
-*/
+//
 
 
 
