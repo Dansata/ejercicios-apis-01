@@ -1,8 +1,11 @@
 const express = require('express')
 const contacts = require('./lista-telefonica')
 const morgan = require('morgan')
+const cors = require('cors')
 
 const app = express()
+
+app.use(cors())
 //Ruta 1.7
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :theReturn'))
