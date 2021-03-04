@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-Api</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex justify-content-between mt-3">
+            <h1>Front Api</h1>
+            <nav>
+                <span>Roger Sterling</span>
+                <span><button>Logout</button></span>
+            </nav>
+        </header>
+        <hr>
+        <section>
+            <!--
+            <div class="person d-flex flex-row align-items-center justify-content-between" id="user-01">
+                <span class="d-flex flex-row align-items-center">
+                    <div>
+                        <img width="150" height="150"
+                            src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Don_Draper_Wiki.jpg/220px-Don_Draper_Wiki.jpg"
+                            alt="">
+                    </div>
+                    <div>
+                        <h2 class="fullName">Don Draper</h2>
+                        <p class="position">Copywriter Advertising</p>
+                    </div>
+                </span>
+                <span>
+                    <p class="status d-inline">Available</p>
+                </span>
+                
+            </div> -->
+                    
+        </section>
+    </div>
+    <script>        
+        const users = [
+            {
+                "_id": "603d975cc45ac366c8160aa2",
+                "index": 0,
+                "guid": "f0127708-fb34-49d7-b03d-04aae899546f",
+                "isActive": false,
+                "balance": "$3,482.33",
+                "picture": "http://placehold.it/32x32",
+                "age": 40,
+                "eyeColor": "brown",
+                "name": {
+                    "first": "Bush",
+                    "last": "Stanley"
+                },
+                "company": "INTRADISK",
+                "email": "bush.stanley@intradisk.tv",
+                "phone": "+1 (896) 407-3880",
+                "address": "511 Pierrepont Place, Kenmar, Washington, 4740",
+                "about": "Dolore magna dolor minim exercitation minim dolore. Id proident consequat officia ullamco. Tempor laborum duis duis id pariatur est consectetur. Amet labore eu proident exercitation ea eiusmod sint non est adipisicing sit officia.",
+                "registered": "Wednesday, August 12, 2015 9:44 AM"
+            },
+            {
+                "_id": "603d975ce61f2a0d695fc32e",
+                "index": 1,
+                "guid": "ae8b4fb5-8ca6-4175-8482-1536cde1edbd",
+                "isActive": true,
+                "balance": "$3,641.30",
+                "picture": "http://placehold.it/32x32",
+                "age": 24,
+                "eyeColor": "blue",
+                "name": {
+                    "first": "Elvira",
+                    "last": "Shepherd"
+                },
+                "company": "DOGNOST",
+                "email": "elvira.shepherd@dognost.me",
+                "phone": "+1 (943) 495-2198",
+                "address": "232 Willow Place, Joppa, Connecticut, 5071",
+                "about": "Pariatur officia ad mollit eu. Qui reprehenderit proident et nulla. Adipisicing pariatur ex quis quis ad consectetur dolore irure nulla mollit sit adipisicing ea do. Aliqua aliquip ad tempor est cillum non ad consectetur commodo magna sunt anim. Sint Lorem Lorem quis mollit ea cupidatat ullamco minim et. Qui fugiat qui eu occaecat.",
+                "registered": "Friday, April 20, 2018 4:31 AM"
+            },
+            {
+                "_id": "603d975ca3a3310c84116c50",
+                "index": 2,
+                "guid": "a7ba4bb5-3d19-496a-a4fc-d232cf7fffe8",
+                "isActive": false,
+                "balance": "$3,983.07",
+                "picture": "http://placehold.it/32x32",
+                "age": 23,
+                "eyeColor": "blue",
+                "name": {
+                    "first": "Navarro",
+                    "last": "Campbell"
+                },
+                "company": "MEDMEX",
+                "email": "navarro.campbell@medmex.info",
+                "phone": "+1 (961) 553-3737",
+                "address": "333 Crescent Street, Harrison, California, 1427",
+                "about": "Mollit consectetur aute non tempor. Proident velit incididunt minim reprehenderit ipsum aliquip. Aliquip sunt eu elit in pariatur nulla anim consectetur est nulla aliquip. Exercitation esse eiusmod exercitation excepteur. Ullamco proident ea culpa cupidatat mollit deserunt esse excepteur enim enim reprehenderit. Ex minim reprehenderit non cupidatat dolor laboris.",
+                "registered": "Sunday, May 24, 2020 4:00 PM"
+            },
+            {
+                "_id": "603d975c3fc5bf48e9ccd96b",
+                "index": 3,
+                "guid": "16fdd7d5-c30c-4aa4-be2c-f37e710c0c89",
+                "isActive": true,
+                "balance": "$3,512.79",
+                "picture": "http://placehold.it/32x32",
+                "age": 27,
+                "eyeColor": "blue",
+                "name": {
+                    "first": "Pearson",
+                    "last": "Ochoa"
+                },
+                "company": "LETPRO",
+                "email": "pearson.ochoa@letpro.us",
+                "phone": "+1 (839) 512-3319",
+                "address": "956 Turner Place, Dola, Colorado, 7192",
+                "about": "Mollit eiusmod aute non sint id id qui irure sunt cupidatat. Sint commodo laboris amet culpa sunt mollit consectetur est. Nisi nulla duis dolore id deserunt veniam labore in. Esse est ullamco reprehenderit eu id ex quis commodo qui quis occaecat ea voluptate.",
+                "registered": "Sunday, May 27, 2018 9:30 PM"
+            },
+            {
+                "_id": "603d975c255a7a2d2fdcd097",
+                "index": 4,
+                "guid": "9740341e-f3be-45d2-a769-b4536723e80b",
+                "isActive": false,
+                "balance": "$2,669.02",
+                "picture": "http://placehold.it/32x32",
+                "age": 38,
+                "eyeColor": "brown",
+                "name": {
+                    "first": "Imogene",
+                    "last": "Nieves"
+                },
+                "company": "GORGANIC",
+                "email": "imogene.nieves@gorganic.net",
+                "phone": "+1 (801) 508-2947",
+                "address": "340 Euclid Avenue, Orovada, Pennsylvania, 7454",
+                "about": "Elit nostrud eiusmod elit irure esse commodo sint fugiat nulla. Nostrud officia est do velit laborum. Magna eu nisi laborum commodo minim culpa minim enim proident officia esse dolore cillum.",
+                "registered": "Friday, September 6, 2019 5:08 PM"
+            },
+            {
+                "_id": "603d975c3bb7a45c5c5918aa",
+                "index": 5,
+                "guid": "24c76761-4d8c-4ccd-bf97-5712a47c7b75",
+                "isActive": false,
+                "balance": "$1,862.53",
+                "picture": "http://placehold.it/32x32",
+                "age": 30,
+                "eyeColor": "brown",
+                "name": {
+                    "first": "Burns",
+                    "last": "Sheppard"
+                },
+                "company": "DRAGBOT",
+                "email": "burns.sheppard@dragbot.co.uk",
+                "phone": "+1 (987) 438-2427",
+                "address": "123 Stockholm Street, Grayhawk, Maryland, 2933",
+                "about": "Adipisicing dolor exercitation excepteur ut ea incididunt laboris eu consequat tempor eiusmod. Ad minim minim ut anim irure aute Lorem consequat amet sint adipisicing proident. Aute tempor ex occaecat ut quis deserunt Lorem enim sunt.",
+                "registered": "Wednesday, October 18, 2017 3:48 PM"
+            },
+            {
+                "_id": "603d975c98637f072024c8cb",
+                "index": 6,
+                "guid": "6b679c72-8082-4621-a9b9-889ad9cbc82d",
+                "isActive": false,
+                "balance": "$2,672.79",
+                "picture": "http://placehold.it/32x32",
+                "age": 35,
+                "eyeColor": "green",
+                "name": {
+                    "first": "Steele",
+                    "last": "Stevens"
+                },
+                "company": "UTARA",
+                "email": "steele.stevens@utara.name",
+                "phone": "+1 (821) 563-3676",
+                "address": "970 Gatling Place, Jacksonwald, Ohio, 1120",
+                "about": "Nostrud est ex ad sint tempor et. Eu consequat incididunt eiusmod duis pariatur reprehenderit. Et nostrud ullamco nisi reprehenderit eiusmod ea. Nisi consequat amet et ea minim. Occaecat dolore veniam ad aliqua nulla irure consequat anim nulla nisi.",
+                "registered": "Wednesday, January 31, 2018 3:39 PM"
+            },
+            {
+                "_id": "603d975c88ffd391a51b74cb",
+                "index": 7,
+                "guid": "d8ba9864-d6ef-461b-83c0-e95cfd7f4480",
+                "isActive": true,
+                "balance": "$2,315.81",
+                "picture": "http://placehold.it/32x32",
+                "age": 35,
+                "eyeColor": "green",
+                "name": {
+                    "first": "Rowe",
+                    "last": "Whitfield"
+                },
+                "company": "TRIPSCH",
+                "email": "rowe.whitfield@tripsch.biz",
+                "phone": "+1 (803) 436-3219",
+                "address": "565 Pershing Loop, Guilford, Wyoming, 7921",
+                "about": "Laboris Lorem commodo sit ad dolor cupidatat ad fugiat. Sit anim ad proident consectetur duis cillum excepteur magna quis. Ex anim laborum non ut dolore enim id culpa. Sunt dolore ipsum voluptate in occaecat. Id aliquip do adipisicing qui. Commodo id consequat deserunt officia aliqua ipsum tempor ipsum tempor. Culpa sunt ipsum ut sit incididunt cupidatat mollit cillum dolor.",
+                "registered": "Sunday, August 27, 2017 5:05 PM"
+            },
+            {
+                "_id": "603d975c2249e8634b748130",
+                "index": 8,
+                "guid": "e51eda73-b31b-4573-8909-1c915e5cacb0",
+                "isActive": false,
+                "balance": "$3,736.21",
+                "picture": "http://placehold.it/32x32",
+                "age": 32,
+                "eyeColor": "green",
+                "name": {
+                    "first": "Burks",
+                    "last": "Pacheco"
+                },
+                "company": "SONIQUE",
+                "email": "burks.pacheco@sonique.io",
+                "phone": "+1 (852) 486-3396",
+                "address": "184 Dinsmore Place, Tecolotito, Missouri, 7400",
+                "about": "Quis ex fugiat labore ex et ut esse cillum sit aliquip veniam. Do mollit aliqua minim eu officia quis pariatur in aliqua officia ex excepteur ut. Velit qui duis pariatur cupidatat culpa sint et et qui est occaecat ullamco. Adipisicing deserunt incididunt labore aute. Quis anim deserunt irure cupidatat dolor aute culpa ullamco enim exercitation excepteur duis dolore consequat. Aliquip nisi tempor voluptate eu aliquip velit exercitation. Fugiat voluptate nostrud officia sit ad Lorem nulla.",
+                "registered": "Monday, June 1, 2020 11:43 AM"
+            },
+            {
+                "_id": "603d975c56f0aad38d8388b7",
+                "index": 9,
+                "guid": "f379951d-e39f-4816-9cf0-f52b6d5068ad",
+                "isActive": false,
+                "balance": "$3,203.76",
+                "picture": "http://placehold.it/32x32",
+                "age": 40,
+                "eyeColor": "brown",
+                "name": {
+                    "first": "Liza",
+                    "last": "Estrada"
+                },
+                "company": "MAXIMIND",
+                "email": "liza.estrada@maximind.biz",
+                "phone": "+1 (999) 577-2185",
+                "address": "294 Gunther Place, Snelling, Iowa, 7278",
+                "about": "Dolore anim ut enim culpa aute ex amet nostrud qui laboris non amet qui. Ullamco ipsum et occaecat amet nisi ullamco consequat. Do velit ad in ut mollit.",
+                "registered": "Friday, May 6, 2016 4:34 PM"
+            }
+        ]
+
+        users.forEach(user => {
+            const pictureUserUrl = user.picture
+            const nameUser = document.createTextNode(`${user.name.first} ${user.name.last}`)
+            const companyUser = document.createTextNode(user.company)            
+            const statusUser = (user.isActive === true) ? 'Available' : 'Not Available Yet';            
+
+            //Tags
+            const section = document.querySelector('section')
+            const divPerson = document.createElement('div')
+            const divPersonClasses = ['person', 'd-flex', 'flex-row', 'align-items-center', 'justify-content-between']
+            divPerson.classList.add(...divPersonClasses);
+            section.appendChild(divPerson)
+
+            const spanCol1 = document.createElement('span')
+            const spanCol1Classes = ['d-flex', 'flex-row', 'align-items-center']
+            spanCol1.classList.add(...spanCol1Classes)
+            divPerson.appendChild(spanCol1)
+
+            const imageDiv = document.createElement('div')
+            spanCol1.appendChild(imageDiv)
+
+            const profilePict = document.createElement('img')
+            profilePict.setAttribute("src", pictureUserUrl)
+            profilePict.setAttribute("width", "150")
+            imageDiv.appendChild(profilePict)
+
+            const nameDiv = document.createElement('div')
+            nameDiv.className = 'm-3'
+            spanCol1.appendChild(nameDiv)
+
+            const namePlaceholder = document.createElement('h2')
+            namePlaceholder.appendChild(nameUser)
+            const positionPlaceholder = document.createElement('p')
+            positionPlaceholder.appendChild(companyUser)
+            nameDiv.append(namePlaceholder, positionPlaceholder)
+
+            const spanCol2 = document.createElement('span')
+            divPerson.appendChild(spanCol2)
+
+            const statusP = document.createElement('p')
+            const availability = document.createTextNode(statusUser)
+            statusP.appendChild(availability)
+            spanCol2.appendChild(statusP)
+
+            const hr = document.createElement('hr')
+            section.appendChild(hr)         
+
+            
+        });
+       
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

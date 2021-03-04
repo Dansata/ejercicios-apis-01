@@ -2,10 +2,14 @@ const express = require('express')
 const contacts = require('./lista-telefonica')
 const morgan = require('morgan')
 const cors = require('cors')
+const routesImported = require('./routes')
 
 const app = express()
 
 app.use(cors())
+
+routesImported(app)
+
 //Ruta 1.7
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :theReturn'))
